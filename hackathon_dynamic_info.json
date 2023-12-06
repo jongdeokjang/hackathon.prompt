@@ -1,103 +1,52 @@
 [
     {
         "replacingName": "#todaysDate#",
-        "todaysDate": "12/07/2023"
+        "content": {
+            "todaysDate": "12/07/2023"
+        }
     },
     {
-        "replacingName": "#taggedCycleList#",
-        "taggedCycleList": [
+        "replacingName": "#selfMaintenanceHistory#",
+        "content": {
+            "lastSelfCleanDate": "11/01/2023",
+            "lastPumpFilterCleanDate": "7/20/2023"
+        }
+    },
+    {
+        "replacingName": "#cycleHistory#",
+        "content": [
             {
-                "title": "taggedCycle",
-                "description": "JSON format for remembering previously recommended cycle via tag names",
-                "type": "object",
-                "properties": {
-                    "replyType": {
-                        "description": "Type of reply",
-                        "type": "string",
-                        "enum": [
-                            "taggedCycle"
-                        ]
-                    },
-                    "tagName": {
-                        "description": "Tag name given by the user",
-                        "type": "string"
-                    },
-                    "washCycle": {
-                        "description": "Object that describes the recommending wash cycle",
-                        "type": "object",
-                        "properties": {
-                            "cycleType": {
-                                "description": "One of the available wash cycles",
-                                "type": "number",
-                                "enum": [
-                                    0,
-                                    1,
-                                    2,
-                                    3,
-                                    4,
-                                    5,
-                                    6,
-                                    7,
-                                    8,
-                                    9,
-                                    10,
-                                    11
-                                ],
-                                "enumNames": [
-                                    "Normal",
-                                    "Whites",
-                                    "Towels",
-                                    "BulkyBedding",
-                                    "SanitizePlusAllergen",
-                                    "PowerClean",
-                                    "QuickWash",
-                                    "Delicates",
-                                    "ColdWash",
-                                    "ActiveWear",
-                                    "RinseAndSpin",
-                                    "SelfClean"
-                                ]
-                            },
-                            "chosenOptions": {
-                                "description": "one of the available option in the optionsAvailable that matches the cycle type. For `changeSoil`, `changeWashTemp`, and `changeSpinSelection` if it matches the cycles default value do not include it the recommendation",
-                                "type": "array",
-                                "items": {
-                                    "properties": {
-                                        "option": {
-                                            "description": "one of the available option",
-                                            "type": "string"
-                                        },
-                                        "optionId": {
-                                            "description": "the matching optionId of the option",
-                                            "type": "string"
-                                        },
-                                        "parameter": {
-                                            "description": "matching parameter of the chosen option",
-                                            "type": "number"
-                                        }
-                                    }
-                                }
-                            },
-                            "reason": {
-                                "description": "Give the reasoning behind why you chose this cycle and its options. Remind the user to check the clothes pockets and other laundry related tips. Content of the reply. Should only contain human readable strings. Remove any and all formatting strings like \\n or \\p.",
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
+                "cycleDate": "December first two thousand and three",
+                "cycleType": "0x82"
             }
         ]
     },
     {
-        "replacingName": "#usageHistory#",
-        "usageHistory": [
+        "replacingName": "#taggedCycleList#",
+        "content": [
             {
-                "cycleType": "PowerClean",
-                "date": "11/22/2023"
-            },
-            {
-                "cycleType": "QuickWash",
-                "date": "11/19/2023"
+                "replyType": "taggedCycle",
+                "tagName": "winter jacket baby",
+                "washCycle": {
+                    "cycleType": "0x1B",
+                    "chosenOptions": [
+                        {
+                            "option": "preWash",
+                            "optionId": "0x205A",
+                            "parameter": "0x01"
+                        },
+                        {
+                            "option": "extraRinse",
+                            "optionId": "0x2018",
+                            "parameter": "0x02"
+                        },
+                        {
+                            "option": "changeWashTemp",
+                            "optionId": "0x2016",
+                            "parameter": "0x10"
+                        }
+                    ]
+                }
             }
         ]
     }
