@@ -2,9 +2,10 @@
     "dynamicInfo" : [
         {
             "replacingName": "#todaysDate#",
-            "content": {
-                "todaysDate": "12/07/2023"
-            }
+            "content": null
+            // {
+            //     "todaysDate": "12/07/2023"
+            // }
         },
         {
             "replacingName": "#selfMaintenanceHistory#",
