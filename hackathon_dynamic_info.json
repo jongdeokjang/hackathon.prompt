@@ -1,53 +1,55 @@
-[
-    {
-        "replacingName": "#todaysDate#",
-        "content": {
-            "todaysDate": "12/07/2023"
-        }
-    },
-    {
-        "replacingName": "#selfMaintenanceHistory#",
-        "content": {
-            "lastSelfCleanDate": "11/01/2023",
-            "lastPumpFilterCleanDate": "7/20/2023"
-        }
-    },
-    {
-        "replacingName": "#cycleHistory#",
-        "content": [
-            {
-                "cycleDate": "December first two thousand and three",
-                "cycleType": "0x82"
+{
+    "dynamicInfo" : [
+        {
+            "replacingName": "#todaysDate#",
+            "content": {
+                "todaysDate": "12/07/2023"
             }
-        ]
-    },
-    {
-        "replacingName": "#taggedCycleList#",
-        "content": [
-            {
-                "replyType": "taggedCycle",
-                "tagName": "winter jacket baby",
-                "washCycle": {
-                    "cycleType": "0x1B",
-                    "chosenOptions": [
-                        {
-                            "option": "preWash",
-                            "optionId": "0x205A",
-                            "parameter": "0x01"
-                        },
-                        {
-                            "option": "extraRinse",
-                            "optionId": "0x2018",
-                            "parameter": "0x02"
-                        },
-                        {
-                            "option": "changeWashTemp",
-                            "optionId": "0x2016",
-                            "parameter": "0x10"
-                        }
-                    ]
+        },
+        {
+            "replacingName": "#selfMaintenanceHistory#",
+            "content": {
+                "lastSelfCleanDate": "11/01/2023",
+                "lastPumpFilterCleanDate": "7/20/2023"
+            }
+        },
+        {
+            "replacingName": "#cycleHistory#",
+            "content": [
+                {
+                    "cycleDate": "December first two thousand and three",
+                    "cycleType": "0x82"
                 }
-            }
-        ]
-    }
-]
+            ]
+        },
+        {
+            "replacingName": "#taggedCycleList#",
+            "content": [
+                {
+                    "replyType": "taggedCycle",
+                    "tagName": "winter jacket baby",
+                    "washCycle": {
+                        "cycleType": "0x1B",
+                        "chosenOptions": [
+                            {
+                                "option": "preWash",
+                                "optionId": "0x205A",
+                                "parameter": "0x01"
+                            },
+                            {
+                                "option": "extraRinse",
+                                "optionId": "0x2018",
+                                "parameter": "0x02"
+                            },
+                            {
+                                "option": "changeWashTemp",
+                                "optionId": "0x2016",
+                                "parameter": "0x10"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
