@@ -1,5 +1,9 @@
 [
     {
+        "replacingName": "#todaysDate#",
+        "todaysDate": "12/07/2023"
+    },
+    {
         "replacingName": "#taggedCycleList#",
         "taggedCycleList": [
             {
@@ -86,14 +90,14 @@
     },
     {
         "replacingName": "#usageHistory#",
-        "usageHistory":[
+        "usageHistory": [
             {
-                "cycleType":"PowerClean",
-                "date":"11/22/2023"
+                "cycleType": "PowerClean",
+                "date": "11/22/2023"
             },
             {
-                "cycleType":"QuickWash",
-                "date":"11/19/2023"
+                "cycleType": "QuickWash",
+                "date": "11/19/2023"
             }
         ]
     }
