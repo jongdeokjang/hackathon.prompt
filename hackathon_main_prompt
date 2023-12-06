@@ -784,11 +784,9 @@ Tagged cycle list contains data about the tagged wash cycles
                 "taggedCycleSummary"
             ]
         },
-        {
-            "content": {
-                "description": "Content of the reply",
-                "type": "string"
-            }
+        "content": {
+            "description": "Content of the reply",
+            "type": "string"
         }
     }
 }\n
