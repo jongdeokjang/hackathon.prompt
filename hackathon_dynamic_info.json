@@ -1,10 +1,6 @@
 {
     "dynamicInfo" : [
         {
-            "replacingName": "#todaysDate#",
-            "content": null
-        },
-        {
             "replacingName": "#selfMaintenanceHistory#",
             "content": {
                 "lastSelfCleanDate": "11/01/2023",
