@@ -39,10 +39,14 @@ The "JSON Configuration" contains three property\n
                 "washTemp": "Warm",
                 "spinSelection": "Medium",
                 "optionsAvailable": [
+                    "autoSoak",
                     "preWash",
-                    "timeSaver",
+                    "noTangle",
+                    "powerCareRatio",
+                    "smartWash",
                     "extraRinse",
-                    "oneStepWashDry",
+                    "smartRinse",
+                    "deepRinse",
                     {
                         "changeSoil": [
                             "ExtraHeavy",
@@ -54,18 +58,20 @@ The "JSON Configuration" contains three property\n
                     },
                     {
                         "changeWashTemp": [
-                            "ExtraHot",
                             "Hot",
                             "Warm",
+                            "Colors",
+                            "Cool",
                             "Cold",
                             "TapCold"
                         ]
                     },
                     {
                         "changeSpinSelection": [
-                            "Max",
-                            "High",
-                            "Medium"
+                            "Max""Extra",
+                            "More",
+                            "Normal",
+                            "NoSpin"
                         ]
                     }
                 ]
@@ -75,51 +81,17 @@ The "JSON Configuration" contains three property\n
                 "itemsToWash": "Whites and household linens.",
                 "soilLevel": "Normal",
                 "washTemp": "Hot",
-                "spinSelection": "High",
+                "spinSelection": "Normal",
                 "optionsAvailable": [
-                    "preWash",
-                    "timeSaver",
+                    "autoSoak",
+                    "deepFill",
                     "extraRinse",
-                    "oneStepWashDry",
-                    {
-                        "changeSoil": [
-                            "ExtraHeavy",
-                            "Heavy",
-                            "Normal",
-                            "Light",
-                            "ExtraLight"
-                        ]
-                    },
-                    {
-                        "changeWashTemp": [
-                            "ExtraHot",
-                            "Hot",
-                            "Warm",
-                            "Cold",
-                            "TapCold"
-                        ]
-                    },
-                    {
-                        "changeSpinSelection": [
-                            "Max",
-                            "High",
-                            "Medium",
-                            "Low"
-                        ]
-                    }
-                ]
-            },
-            {
-                "washCycle": "Towels",
-                "itemsToWash": "Towels, sheets, pillowcases and dish rags.",
-                "soilLevel": "Normal",
-                "washTemp": "Warm",
-                "spinSelection": "High",
-                "optionsAvailable": [
+                    "deepRinse",
                     "preWash",
-                    "timeSaver",
-                    "extraRinse",
-                    "oneStepWashDry",
+                    "noTangle",
+                    "powerCareRatio",
+                    "smartWash",
+                    "smartRinse",
                     {
                         "changeSoil": [
                             "ExtraHeavy",
@@ -133,6 +105,8 @@ The "JSON Configuration" contains three property\n
                         "changeWashTemp": [
                             "Hot",
                             "Warm",
+                            "Colors",
+                            "Cool",
                             "Cold",
                             "TapCold"
                         ]
@@ -140,150 +114,10 @@ The "JSON Configuration" contains three property\n
                     {
                         "changeSpinSelection": [
                             "Max",
-                            "High",
-                            "Medium",
-                            "Low"
-                        ]
-                    }
-                ]
-            },
-            {
-                "washCycle": "BulkyBedding",
-                "itemsToWash": "Large coats, bed spreads, mattress covers, sleeping bags, and similar large bulky items.",
-                "soilLevel": "Normal",
-                "washTemp": "Warm",
-                "spinSelection": "High",
-                "optionsAvailable": [
-                    "preWash",
-                    "timeSaver",
-                    "extraRinse",
-                    "oneStepWashDry",
-                    {
-                        "changeSoil": [
-                            "ExtraHeavy",
-                            "Heavy",
+                            "Extra",
+                            "More",
                             "Normal",
-                            "Light",
-                            "ExtraLight"
-                        ]
-                    },
-                    {
-                        "changeWashTemp": [
-                            "Hot",
-                            "Warm",
-                            "Cold",
-                            "TapCold"
-                        ]
-                    },
-                    {
-                        "changeSpinSelection": [
-                            "Max",
-                            "High",
-                            "Medium",
-                            "Low"
-                        ]
-                    }
-                ]
-            },
-            {
-                "washCycle": "SanitizePlusAllergen",
-                "itemsToWash": "Heavily soiled colorfast items with the need for sanitization.",
-                "soilLevel": "Heavy",
-                "washTemp": "ExtraHot",
-                "spinSelection": "Max",
-                "optionsAvailable": [
-                    "preWash",
-                    "powerSteam",
-                    "extraRinse",
-                    "oneStepWashDry",
-                    {
-                        "changeSoil": [
-                            "ExtraHeavy",
-                            "Heavy"
-                        ]
-                    },
-                    {
-                        "changeWashTemp": [
-                            "ExtraHot"
-                        ]
-                    },
-                    {
-                        "changeSpinSelection": [
-                            "Max",
-                            "High",
-                            "Medium",
-                            "Low"
-                        ]
-                    }
-                ]
-            },
-            {
-                "washCycle": "PowerClean",
-                "itemsToWash": "For heavily soiled items which require extra cleaning power.",
-                "soilLevel": "Extra Heavy",
-                "washTemp": "Hot",
-                "spinSelection": "Max",
-                "optionsAvailable": [
-                    "preWash",
-                    "powerSteam",
-                    "extraRinse",
-                    "oneStepWashDry",
-                    {
-                        "changeSoil": [
-                            "ExtraHeavy",
-                            "Heavy",
-                            "Normal"
-                        ]
-                    },
-                    {
-                        "changeWashTemp": [
-                            "ExtraHot",
-                            "Hot",
-                            "Warm",
-                            "Cold",
-                            "TapCold"
-                        ]
-                    },
-                    {
-                        "changeSpinSelection": [
-                            "Max",
-                            "High",
-                            "Medium",
-                            "Low"
-                        ]
-                    }
-                ]
-            },
-            {
-                "washCycle": "QuickWash",
-                "itemsToWash": "Small loads of lightly soiled items that are needed in a hurry.",
-                "soilLevel": "Extra Light",
-                "washTemp": "Warm",
-                "spinSelection": "High",
-                "optionsAvailable": [
-                    "extraRinse",
-                    "oneStepWashDry",
-                    {
-                        "changeSoil": [
-                            "Normal",
-                            "Light",
-                            "ExtraLight"
-                        ]
-                    },
-                    {
-                        "changeWashTemp": [
-                            "Hot",
-                            "Warm",
-                            "Cold",
-                            "TapCold"
-                        ]
-                    },
-                    {
-                        "changeSpinSelection": [
-                            "Max",
-                            "High",
-                            "Medium",
-                            "Low"
+                            "NoSpin"
                         ]
                     }
                 ]
@@ -292,46 +126,17 @@ The "JSON Configuration" contains three property\n
                 "washCycle": "Delicates",
                 "itemsToWash": "Lingerie and special care fabrics with light soil.",
                 "soilLevel": "Light",
-                "washTemp": "Tap Cold",
-                "spinSelection": "Low",
+                "washTemp": "Cold",
+                "spinSelection": "Normal",
                 "optionsAvailable": [
-                    "preWash",
-                    "timeSaver",
+                    "autoSoak",
+                    "deepFill",
                     "extraRinse",
-                    "oneStepWashDry",
-                    {
-                        "changeSoil": [
-                            "Normal",
-                            "Light",
-                            "ExtraLight"
-                        ]
-                    },
-                    {
-                        "changeWashTemp": [
-                            "Warm",
-                            "Cold",
-                            "TapCold"
-                        ]
-                    },
-                    {
-                        "changeSpinSelection": [
-                            "Medium",
-                            "Low",
-                            "NoSpin"
-                        ]
-                    }
-                ]
-            },
-            {
-                "washCycle": "ColdWash",
-                "itemsToWash": "Cycle for normal, regular, or typical use for washing up to a full load of normally soiled cotton clothing using only cold water.",
-                "soilLevel": "Normal",
-                "washTemp": "Tap Cold",
-                "spinSelection": "High",
-                "optionsAvailable": [
+                    "deepRinse",
                     "preWash",
-                    "extraRinse",
-                    "oneStepWashDry",
+                    "powerCareRatio",
+                    "smartWash",
+                    "smartRinse",
                     {
                         "changeSoil": [
                             "ExtraHeavy",
@@ -343,6 +148,10 @@ The "JSON Configuration" contains three property\n
                     },
                     {
                         "changeWashTemp": [
+                            "Hot",
+                            "Warm",
+                            "Colors",
+                            "Cool",
                             "Cold",
                             "TapCold"
                         ]
@@ -350,24 +159,30 @@ The "JSON Configuration" contains three property\n
                     {
                         "changeSpinSelection": [
                             "Max",
-                            "High",
-                            "Medium",
-                            "Low"
+                            "Extra",
+                            "More",
+                            "Normal",
+                            "NoSpin"
                         ]
                     }
                 ]
             },
             {
-                "washCycle": "ActiveWear",
-                "itemsToWash": "Medium to lightly soiled athletic wear items of technical or synthetic fabrics.",
+                "washCycle": "Jeans",
+                "itemsToWash": "Cycle dedicated for washing jeans.",
                 "soilLevel": "Normal",
-                "washTemp": "Warm",
-                "spinSelection": "Medium",
+                "washTemp": "Cool",
+                "spinSelection": "Normal",
                 "optionsAvailable": [
-                    "preWash",
-                    "timeSaver",
+                    "autoSoak",
+                    "deepFill",
                     "extraRinse",
-                    "oneStepWashDry",
+                    "deepRinse",
+                    "preWash",
+                    "noTangle",
+                    "powerCareRatio",
+                    "smartWash",
+                    "smartRinse",
                     {
                         "changeSoil": [
                             "ExtraHeavy",
@@ -379,79 +194,219 @@ The "JSON Configuration" contains three property\n
                     },
                     {
                         "changeWashTemp": [
+                            "Hot",
                             "Warm",
+                            "Colors",
+                            "Cool",
                             "Cold",
                             "TapCold"
                         ]
                     },
                     {
                         "changeSpinSelection": [
-                            "Medium",
-                            "Low",
+                            "Max",
+                            "Extra",
+                            "More",
+                            "Normal",
                             "NoSpin"
                         ]
                     }
                 ]
             },
             {
-                "washCycle": "RinseAndSpin",
+                "washCycle": "Towels",
+                "itemsToWash": "Towels, sheets, pillowcases and dish rags.",
+                "soilLevel": "Normal",
+                "washTemp": "Colors",
+                "spinSelection": "Normal",
+                "optionsAvailable": [
+                    "autoSoak",
+                    "deepFill",
+                    "extraRinse",
+                    "deepRinse",
+                    "preWash",
+                    "noTangle",
+                    "powerCare",
+                    "smartWash",
+                    "smartRinse",
+                    {
+                        "changeSoil": [
+                            "ExtraHeavy",
+                            "Heavy",
+                            "Normal",
+                            "Light",
+                            "ExtraLight"
+                        ]
+                    },
+                    {
+                        "changeWashTemp": [
+                            "Hot",
+                            "Warm",
+                            "Colors",
+                            "Cool",
+                            "Cold",
+                            "TapCold"
+                        ]
+                    },
+                    {
+                        "changeSpinSelection": [
+                            "Max",
+                            "Extra",
+                            "More",
+                            "Normal",
+                            "NoSpin"
+                        ]
+                    }
+                ]
+            },
+            {
+                "washCycle": "Bulky",
+                "itemsToWash": "Large coats, bed spreads, mattress covers, sleeping bags, and similar large bulky items.",
+                "soilLevel": "Normal",
+                "washTemp": "Cool",
+                "spinSelection": "Normal",
+                "optionsAvailable": [
+                    "autoSoak",
+                    "extraRinse",
+                    "deepRinse",
+                    "preWash",
+                    "powerCareRatio",
+                    "smartWash",
+                    "smartRinse",
+                    {
+                        "changeSoil": [
+                            "ExtraHeavy",
+                            "Heavy",
+                            "Normal",
+                            "Light",
+                            "ExtraLight"
+                        ]
+                    },
+                    {
+                        "changeWashTemp": [
+                            "Hot",
+                            "Warm",
+                            "Colors",
+                            "Cool",
+                            "Cold",
+                            "TapCold"
+                        ]
+                    },
+                    {
+                        "changeSpinSelection": [
+                            "Max",
+                            "Extra",
+                            "More",
+                            "Normal",
+                            "NoSpin"
+                        ]
+                    }
+                ]
+            },
+            {
+                "washCycle": "QuickWash",
+                "itemsToWash": "Small loads of lightly soiled items that are needed in a hurry.",
+                "soilLevel": "ExtraLight",
+                "washTemp": "Warm",
+                "spinSelection": "Normal",
+                "optionsAvailable": [
+                    "autoSoak",
+                    "deepFill",
+                    "extraRinse",
+                    "deepRinse",
+                    "preWash",
+                    "noTangle",
+                    "powerCare",
+                    "smartWash",
+                    "smartRinse",
+                    {
+                        "changeSoil": [
+                            "ExtraHeavy",
+                            "Heavy",
+                            "Normal",
+                            "Light",
+                            "ExtraLight"
+                        ]
+                    },
+                    {
+                        "changeWashTemp": [
+                            "Hot",
+                            "Warm",
+                            "Colors",
+                            "Cool",
+                            "Cold"
+                        ]
+                    },
+                    {
+                        "changeSpinSelection": [
+                            "Max",
+                            "Extra",
+                            "More",
+                            "Normal",
+                            "NoSpin"
+                        ]
+                    }
+                ]
+            },
+            {
+                "washCycle": "SanitizeWithOxy",
+                "itemsToWash": "Heavily soiled colorfast items with the need for sanitization.",
+                "soilLevel": "ExtraHeavy",
+                "washTemp": "Hot",
+                "spinSelection": "More",
+                "optionsAvailable": [
+                    "autoSoak",
+                    "extraRinse",
+                    "deepRinse",
+                    {
+                        "changeSpinSelection": [
+                            "Max",
+                            "Extra",
+                            "More"
+                        ]
+                    }
+                ]
+            },
+            {
+                "washCycle": "DrainAndSpin",
                 "itemsToWash": "For items that need only to be rinsed use this cycle.",
                 "soilLevel": "",
                 "washTemp": "",
-                "spinSelection": "Max",
+                "spinSelection": "Normal",
                 "optionsAvailable": [
+                    "deepFill",
                     "extraRinse",
-                    "oneStepWashDry",
+                    "deepRinse",
                     {
                         "changeSpinSelection": [
                             "Max",
-                            "High",
-                            "Medium",
-                            "Low",
+                            "Extra",
+                            "More",
+                            "Normal",
                             "NoSpin"
                         ]
                     }
-                ]
-            },
-            {
-                "washCycle": "SelfClean",
-                "itemsToWash": "Cleaning the basket of residue and odor. No clothes to be washed using this cycle.",
-                "soilLevel": "",
-                "washTemp": "",
-                "spinSelection": "Medium",
-                "optionsAvailable": [
-                    ""
                 ]
             }
         ]
     },
     {
-        {
-            "optionsAvailableDescription": [
+        "optionsAvailableDescription": {
+            [
                 {
-                    "optionName": "powerSteam",
-                    "optionId": "0x2058",
-                    "optionDescription": "Power Steam adds steam into the washer before the wash cycle begins to assist with loosening stains. availableParameterss are set as 0 or 1",
+                    "optionName": "deepFill",
+                    "optionId": "0x20AE",
+                    "optionDescription": "Deepfill fills the washer with extra water, recommended for special case loads only, not for typical use. It is used when there are larger loads or heavily soiled loads.",
                     "availableParameters": [
                         {
                             "disabled": "0x00",
-                            "enabled": "0x01"
+                            "mediumFill": "0x01",
+                            "maxFill": "0x02",
                         }
                     ]
                 },
                 {
-                    "optionName": "oneStepWashDry",
-                    "optionId": "0x2064",
-                    "optionDescription": "This option is available on all cycles except Self Clean. The oneStepWashDry is intended for small loads only. Use when clothes need to be washed, dried and ready to wear or finished the next morning. This feature will tumble clothes and introduce a constant stream of air into the washer compartment upon completion of select wash cycles. Although the drying portion is set to 8 hours, the clothes can be removed at any time by pressing Pause or Power to cancel the cycle. availableParameterss are set in 0 or 1",
-                    "availableParameters": [
-                        {
-                            "disabled": "0x00",
-                            "enabled": "0x01"
-                        }
-                    ]
-                },
-                {
-                    "optionName": "preWash:",
+                    "optionName": "preWash",
                     "optionId": "0x205A",
                     "optionDescription": "Prewash is an extra wash before the main wash. Use it for heavily soiled clothes or for clothes with a care label that recommends prewashing before washing. Be sure to add liquid or powder high-efficiency detergent, or the proper wash additive to the prewash dispenser. Washers equipped with SmartDispense will automatically add the proper amount of detergent for prewash based on the load size. PreWash must be selected prior to pressing Start. availableParameterss are set in 0 or 1",
                     "availableParameters": [
@@ -462,20 +417,81 @@ The "JSON Configuration" contains three property\n
                     ]
                 },
                 {
-                    "optionName": "extraRinse",
-                    "optionId": "0x2018",
-                    "optionDescription": "This option allows for an extra rinse during a cycle to remove excess dirt and detergent from soiled loads. Press the Extra Rinse pad to select. NOTE: On RINSE & SPIN cycle, a drain and spin cycle can be achieved by pressing the Extra Rinse pad until the LED is no longer illuminated. availableParameterss are set in 0 or 1",
+                    "optionName": "noTangle",
+                    "optionId": "0x20A3",
+                    "optionDescription": "noTangle is an option that will adjust your wash cycle to aid in the prevention of tangle",
                     "availableParameters": [
                         {
                             "disabled": "0x00",
-                            "enabled": "0x02"
+                            "enabled": "0x01"
                         }
                     ]
                 },
                 {
-                    "optionName": "timeSaver",
-                    "optionId": "0x2055",
-                    "optionDescription": "This option reduces the overall washer cycle time by optimizing the wash, rinse and spin actions and/or gently raising the wash temperature to get clothes cleaned faster. availableParameterss are set in 0 or 1",
+                    "optionName": "autoSoak",
+                    "optionId": "0x20AC",
+                    "optionDescription": "autoSoak is an option that adds a small agitation and soak before the selected cycle begins. Auto soak allows the load to be soaked for a certain amount of time before the main cycle begins.",
+                    "availableParameters": [
+                        {
+                            "autoSoakOff": "0x00",
+                            "autoSoak30Minute": "0x01",
+                            "autoSoak60Minute": "0x02",
+                            "autoSoak90Minute": "0x03",
+                            "autoSoak120Minute": "0x04",
+                        }
+                    ]
+                },
+                {
+                    "optionName": "extraRinse",
+                    "optionId": "0x20B4",
+                    "optionDescription": "This option allows for an extra rinse during a cycle to remove excess dirt and detergent from soiled loads.",
+                    "availableParameters": [
+                        {
+                            "disabled": "0x00",
+                            "enabled": "0x01"
+                        }
+                    ]
+                },
+                {
+                    "optionName": "smartWash",
+                    "optionId": "0x20A0",
+                    "optionDescription": "This option automatically detects the soil level of the load and adjusts the wash cycle accordingly changing agitation level and soaking time",
+                    "availableParameters": [
+                        {
+                            "disabled": "0x00",
+                            "enabled": "0x01"
+                        }
+                    ]
+                },
+                {
+                    "optionName": "smartRinse",
+                    "optionId": "0x20A9",
+                    "optionDescription": "This option automatically detects the soil level and detergent amount of the current load, and determines if additional water is needed and provides it, ensuring thorough rinse and protection of the fabrics",
+                    "availableParameters": [
+                        {
+                            "disabled": "0x00",
+                            "enabled": "0x01"
+                        }
+                    ]
+                },
+                {
+                    "optionName": "powerCareRatio",
+                    "optionId": "0x2097",
+                    "optionDescription": "This option adjusts the ratio between the wash performance (Power) and fabric care (Care).",
+                    "availableParameters": [
+                        {
+                            "onlyCare": "0x01",
+                            "MostCareSlightPower": "0x02",
+                            "HalfCareHalfPower": "0x03",
+                            "MostPowerSlightCare": "0x04",
+                            "onlyPower": "0x05"
+                        }
+                    ]
+                },
+                {
+                    "optionName": "deepRinse",
+                    "optionId": "0x20B6",
+                    "optionDescription": "This option deploys a thorough rinse that removes fabric softener residue.",
                     "availableParameters": [
                         {
                             "disabled": "0x00",
@@ -485,43 +501,44 @@ The "JSON Configuration" contains three property\n
                 },
                 {
                     "optionName": "changeSoil",
-                    "optionId": "0x2015",
+                    "optionId": "0x20BF",
                     "optionDescription": "Changes the soil level from the given default one. Changeable options are limited to the ones provided in the washCycleInfo's changeSoil table. availableParameterss are set in 0,1,2,3, or 4",
                     "availableParameters": [
                         {
-                            "ExtraHeavy": "0x04",
-                            "Heavy": "0x03",
-                            "Normal": "0x02",
-                            "Light": "0x01",
-                            "ExtraLight": "0x00"
+                            "ExtraHeavy": "0x05",
+                            "Heavy": "0x04",
+                            "Normal": "0x03",
+                            "Light": "0x02",
+                            "ExtraLight": "0x01",
                         }
                     ]
                 },
                 {
                     "optionName": "changeWashTemp",
-                    "optionId": "0x2016",
+                    "optionId": "0x20BC",
                     "optionDescription": "Changes the wash temperature from the given default one. Changeable options are limited to the ones provided in the washCycleInfo's changeWashTemp table. availableParameterss are set in 0,1,2,3, or 4",
                     "availableParameters": [
                         {
-                            "ExtraHot": "0x16",
-                            "Hot": "0x15",
-                            "Warm": "0x14",
-                            "Cold": "0x11",
-                            "TapCold": "0x10"
+                            "Hot": "0x06",
+                            "Warm": "0x05",
+                            "Colors": "0x04",
+                            "Cool": "0x03",
+                            "Cold": "0x02",
+                            "TapCold": "0x01"
                         }
                     ]
                 },
                 {
                     "optionName": "changeSpinSelection",
-                    "optionId": "0x2017",
+                    "optionId": "0x20B8",
                     "optionDescription": "Changes the spin selection from the given default one. Changeable options are limited to the ones provided in the washCycleInfo's changeSpinSelection table. availableParameterss are set in 0,1,2,3, or 4",
                     "availableParameters": [
                         {
-                            "Max": "0x04",
-                            "High": "0x03",
-                            "Medium": "0x02",
-                            "Low": "0x01",
-                            "NoSpin": "0x00"
+                            "Max": "0x06",
+                            "Extra": "0x05",
+                            "More": "0x04",
+                            "Normal": "0x03",
+                            "NoSpin": "0x01"
                         }
                     ]
                 }
@@ -636,30 +653,24 @@ Tagged cycle list contains data about the tagged wash cycles
                     "enum": [
                         "0x1C",
                         "0x09",
-                        "0x20",
-                        "0x1B",
-                        "0x24",
-                        "0x11",
-                        "0x1D",
                         "0x0D",
-                        "0x15",
-                        "0x82",
-                        "0x12",
-                        "0x1F"
+                        "0x0B",
+                        "0x06",
+                        "0x04",
+                        "0x1D",
+                        "0x1E",
+                        "0x02"
                     ],
                     "enumNames": [
                         "Normal",
                         "Whites",
-                        "Towels",
-                        "BulkyBedding",
-                        "SanitizePlusAllergen",
-                        "PowerClean",
-                        "QuickWash",
                         "Delicates",
-                        "ColdWash",
-                        "ActiveWear",
-                        "RinseAndSpin",
-                        "SelfClean",
+                        "Jeans",
+                        "Towels",
+                        "Bulky",
+                        "QuickWash",
+                        "SanitizeWithOxy",
+                        "DrainAndSpin",
                     ]
                 },
                 "chosenOptions": {
@@ -708,7 +719,7 @@ Tagged cycle list contains data about the tagged wash cycles
             "type": "string"
         },
         "washCycle": {
-            "description": "Object that describes the tagged wash cycle",
+            "description": "Object that describes the recommending wash cycle",
             "type": "object",
             "properties": {
                 "cycleType": {
@@ -717,30 +728,24 @@ Tagged cycle list contains data about the tagged wash cycles
                     "enum": [
                         "0x1C",
                         "0x09",
-                        "0x20",
-                        "0x1B",
-                        "0x24",
-                        "0x11",
-                        "0x1D",
                         "0x0D",
-                        "0x15",
-                        "0x82",
-                        "0x12",
-                        "0x1F"
+                        "0x0B",
+                        "0x06",
+                        "0x04",
+                        "0x1D",
+                        "0x1E",
+                        "0x02"
                     ],
                     "enumNames": [
                         "Normal",
                         "Whites",
-                        "Towels",
-                        "BulkyBedding",
-                        "SanitizePlusAllergen",
-                        "PowerClean",
-                        "QuickWash",
                         "Delicates",
-                        "ColdWash",
-                        "ActiveWear",
-                        "RinseAndSpin",
-                        "SelfClean",
+                        "Jeans",
+                        "Towels",
+                        "Bulky",
+                        "QuickWash",
+                        "SanitizeWithOxy",
+                        "DrainAndSpin",
                     ]
                 },
                 "chosenOptions": {
@@ -763,12 +768,12 @@ Tagged cycle list contains data about the tagged wash cycles
                         }
                     }
                 },
-            },
-            "reason": {
-                "description": "Give description about the tagged cycle",
-                "type": "string"
+                "reason": {
+                    "description": "Give the reasoning behind why you chose this cycle and its options. If its a tagged cycle remind them that its from previously tagged cycle. Remind the user to check the clothes pockets and other laundry related tips. Content of the reply should only contain human readable strings. Remove any and all formatting strings like \n or \p. Also mention that you've already configured the machine to this setting and the user just needs to press run to start the cycle. Also remind the user to clean/brush off any large soils like gum, snow, mud, et cetra",
+                    "type": "string"
+                }
             }
-        },
+        }
     }
 }\n
 
