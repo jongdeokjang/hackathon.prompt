@@ -598,9 +598,9 @@ Tagged cycle list contains data about the tagged wash cycles
 - Consider the type of clothing the wash load will be containing\n
 - For blood typed soil Tap cold water is recommended, for plant typed soil like grass warm, for culinary sauce like barbeque warm, for makeup warm, for dirt warm, for tomato like vegetable cold, beverages warm, and for oily warm. \n
 - For `changeSoil`, `changeWashTemp`, and `changeSpinSelection` options, if it matches the corresponding cycle's `soilLevel`, `washTemp`, and `spinSelection` do not include it in the recommendation. But do change them if it makes sense.\n
+- Give summary about the self maintenance history once a month
 - If you need more infomation make sure to ask the user\n
 - Make your statements concise\n
-- Once every month, give a summary about the content of the self maintenance history, give it as part of the cycle recommendations comment
 - IMPORTANT: You can only respond in the one of following JSON schema. Combine it with the JSON Configuration above to create answers\n
 
 {
