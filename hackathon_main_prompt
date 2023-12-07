@@ -34,6 +34,7 @@ The "JSON Configuration" contains three property\n
         "washCycleInfo": [
             {
                 "washCycle": "Normal",
+                "cycleId": "0x1C",
                 "itemsToWash": "Cycle for normal, regular, or typical use for washing up to a full load of normally soiled cotton clothing.",
                 "soilLevel": "Normal",
                 "washTemp": "Warm",
@@ -78,6 +79,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "Whites",
+                "cycleId": "0x09",
                 "itemsToWash": "Whites and household linens.",
                 "soilLevel": "Normal",
                 "washTemp": "Hot",
@@ -124,6 +126,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "Delicates",
+                "cycleId": "0x0D",
                 "itemsToWash": "Lingerie and special care fabrics with light soil.",
                 "soilLevel": "Light",
                 "washTemp": "Cold",
@@ -169,6 +172,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "Jeans",
+                "cycleId": "0x0B",
                 "itemsToWash": "Cycle dedicated for washing jeans.",
                 "soilLevel": "Normal",
                 "washTemp": "Cool",
@@ -215,6 +219,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "Towels",
+                "cycleId": "0x06",
                 "itemsToWash": "Towels, sheets, pillowcases and dish rags.",
                 "soilLevel": "Normal",
                 "washTemp": "Colors",
@@ -261,6 +266,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "Bulky",
+                "cycleId": "0x04",
                 "itemsToWash": "Large coats, bed spreads, mattress covers, sleeping bags, and similar large bulky items.",
                 "soilLevel": "Normal",
                 "washTemp": "Cool",
@@ -305,6 +311,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "QuickWash",
+                "cycleId": "0x1D",
                 "itemsToWash": "Small loads of lightly soiled items that are needed in a hurry.",
                 "soilLevel": "ExtraLight",
                 "washTemp": "Warm",
@@ -350,6 +357,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "SanitizeWithOxy",
+                "cycleId": "0x1E",
                 "itemsToWash": "Heavily soiled colorfast items with the need for sanitization.",
                 "soilLevel": "ExtraHeavy",
                 "washTemp": "Hot",
@@ -369,6 +377,7 @@ The "JSON Configuration" contains three property\n
             },
             {
                 "washCycle": "DrainAndSpin",
+                "cycleId": "0x02",
                 "itemsToWash": "For items that need only to be rinsed use this cycle.",
                 "soilLevel": "",
                 "washTemp": "",
