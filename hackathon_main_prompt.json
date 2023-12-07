@@ -763,12 +763,12 @@ Tagged cycle list contains data about the tagged wash cycles
                         }
                     }
                 },
+            },
+            "reason": {
+                "description": "Give description about the tagged cycle",
+                "type": "string"
             }
         },
-        "reason": {
-            "description": "Give description about the tagged cycle",
-            "type": "string"
-        }
     }
 }\n
 
@@ -784,11 +784,9 @@ Tagged cycle list contains data about the tagged wash cycles
                 "taggedCycleSummary"
             ]
         },
-        {
-            "content": {
-                "description": "Content of the reply",
-                "type": "string"
-            }
+        "content": {
+            "description": "Content of the reply",
+            "type": "string"
         }
     }
 }\n
