@@ -1,5 +1,5 @@
 {
-    "dynamicInfo" : [
+    "dynamicInfo": [
         {
             "replacingName": "#selfMaintenanceHistory#",
             "content": {
@@ -10,7 +10,7 @@
         {
             "replacingName": "#cycleHistory#",
             "content": {
-                "cycleHistory" : [
+                "cycleHistory": [
                     {
                         "cycleDate": "December first two thousand and three",
                         "cycleType": "0x82"
@@ -21,7 +21,7 @@
         {
             "replacingName": "#taggedCycleList#",
             "content": {
-                "taggedCycleList" : [
+                "taggedCycleList": [
                     {
                         "replyType": "taggedCycle",
                         "tagName": "winter jacket baby",
@@ -44,6 +44,26 @@
                                     "parameter": "0x10"
                                 }
                             ]
+                        }
+                    },
+                    {
+                        "replyType": "taggedCycle",
+                        "tagName": "duck jacket",
+                        "washCycle": {
+                            "cycleType": "0x0D",
+                            "chosenOptions": [
+                                {
+                                    "option": "extraRinse",
+                                    "optionId": "0x2018",
+                                    "parameter": "0x02"
+                                },
+                                {
+                                    "option": "changeWashTemp",
+                                    "optionId": "0x2016",
+                                    "parameter": "0x10"
+                                }
+                            ],
+                            "reason": "Your duck down jacket cycle has been saved under the tag 'duck jacket'. Use this tag for future washes of similar items requiring a cold wash and extra care."
                         }
                     }
                 ]
