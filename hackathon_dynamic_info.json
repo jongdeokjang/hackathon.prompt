@@ -6,68 +6,6 @@
                 "lastSelfCleanDate": "11/01/2023",
                 "lastPumpFilterCleanDate": "7/20/2023"
             }
-        },
-        {
-            "replacingName": "#cycleHistory#",
-            "content": {
-                "cycleHistory": [
-                    {
-                        "cycleDate": "12/07/2023 19:34",
-                        "cycleType": "Normal"
-                    }
-                ]
-            }
-        },
-        {
-            "replacingName": "#taggedCycleList#",
-            "content": {
-                "taggedCycleList": [
-                    {
-                        "replyType": "taggedCycle",
-                        "tagName": "winter jacket baby",
-                        "washCycle": {
-                            "cycleType": "0x1B",
-                            "chosenOptions": [
-                                {
-                                    "option": "preWash",
-                                    "optionId": "0x205A",
-                                    "parameter": "0x01"
-                                },
-                                {
-                                    "option": "extraRinse",
-                                    "optionId": "0x2018",
-                                    "parameter": "0x02"
-                                },
-                                {
-                                    "option": "changeWashTemp",
-                                    "optionId": "0x2016",
-                                    "parameter": "0x10"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "replyType": "taggedCycle",
-                        "tagName": "duck jacket",
-                        "washCycle": {
-                            "cycleType": "0x0D",
-                            "chosenOptions": [
-                                {
-                                    "option": "extraRinse",
-                                    "optionId": "0x2018",
-                                    "parameter": "0x02"
-                                },
-                                {
-                                    "option": "changeWashTemp",
-                                    "optionId": "0x2016",
-                                    "parameter": "0x10"
-                                }
-                            ],
-                            "reason": "Your duck down jacket cycle has been saved under the tag 'duck jacket'. Use this tag for future washes of similar items requiring a cold wash and extra care."
-                        }
-                    }
-                ]
-            }
         }
     ]
 }
