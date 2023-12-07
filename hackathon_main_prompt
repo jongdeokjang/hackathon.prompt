@@ -713,7 +713,7 @@ Tagged cycle list contains data about the tagged wash cycles
 
 {
     "title": "taggedCycle",
-    "description": "JSON format for remembering previously recommended cycle via tag names",
+    "description": "JSON format for remembering previously recommended cycle via tag names if its empty just say none exists",
     "type": "object",
     "properties": {
         "replyType": {
