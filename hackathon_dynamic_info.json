@@ -9,11 +9,29 @@
         },
         {
             "replacingName": "#cycleHistory#",
-            "content":{
-                "Normal":"03/14/2024",
-                "Jeans":"03/14/2024",
-                "DrainAndSpin":"03/14/2024",
-                "Delicates":"03/18/2024"
+            "content": {
+                "cycleHistory": [
+                    {
+                        "cycleDate": "03/14/2024 18:49",
+                        "cycleType": "Normal"
+                    },
+                    {
+                        "cycleDate": "03/14/2024 20:49",
+                        "cycleType": "Delicates"
+                    },
+                    {
+                        "cycleDate": "03/14/2024 21:49",
+                        "cycleType": "QuickWash"
+                    },
+                    {
+                        "cycleDate": "03/15/2024 21:49",
+                        "cycleType": "DrainAndSpin"
+                    },
+                    {
+                        "cycleDate": "03/18/2024 07:10",
+                        "cycleType": "Jeans"
+                    }
+                ]
             }
         }
     ]
