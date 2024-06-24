@@ -43,11 +43,11 @@ responses, you do not include format modifiers like \n, ```json.
                 "recipe"
             ]
         },
-        "Ingredients": {
-            "description": "Ingredients that are needed for the recipe",
+        "ingredients": {
+            "description": "ingredients that are needed for the recipe",
             "type": "string"
         },
-        "Instructions": {
+        "instructions": {
             "description": "Step by step instructions for the recipe. The instructions should be numbered and ordered.",
             "type": "string"
         },
@@ -97,11 +97,11 @@ responses, you do not include format modifiers like \n, ```json.
             "description": "To be saved recipe that was introduced by you before",
             "type": "object",
             "properties": {
-                "Ingredients": {
-                    "description": "Ingredients that are needed for the recipe",
+                "ingredients": {
+                    "description": "ingredients that are needed for the recipe",
                     "type": "string"
                 },
-                "Instructions": {
+                "instructions": {
                     "description": "Step by step instructions for the recipe. The instructions should be numbered and ordered.",
                     "type": "string"
                 },
@@ -129,11 +129,11 @@ responses, you do not include format modifiers like \n, ```json.
             "description": "The recipe that will be walkted through by the guide",
             "type": "object",
             "properties": {
-                "Ingredients": {
-                    "description": "Ingredients that are needed for the recipe",
+                "ingredients": {
+                    "description": "ingredients that are needed for the recipe",
                     "type": "string"
                 },
-                "Instructions": {
+                "instructions": {
                     "description": "Step by step instructions for the recipe. The instructions should be numbered and ordered.",
                     "type": "string"
                 }
