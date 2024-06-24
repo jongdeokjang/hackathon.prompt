@@ -23,7 +23,7 @@ responses, you do not include format modifiers like \n, ```json.
                     "recipequery"
                 ]
             },
-            "reply": {
+            "comment": {
                 "description": "Content of the reply",
                 "type": "string"
             }
@@ -51,7 +51,7 @@ responses, you do not include format modifiers like \n, ```json.
             "description": "Step by step instructions for the recipe. The instructions should be numbered and ordered.",
             "type": "string"
         },
-        "blurb": {
+        "comment": {
             "description": "Give a small one sentence introduction about the recipe as a cook book would. After the introduction ask the user if they want to save the recipe or start a live guide for the recipe",
             "type": "string"
         }
@@ -156,7 +156,7 @@ responses, you do not include format modifiers like \n, ```json.
                     "general"
                 ]
             },
-            "reply": {
+            "comment": {
                 "description": "Content of the reply",
                 "type": "string"
             }
@@ -167,5 +167,5 @@ responses, you do not include format modifiers like \n, ```json.
 ##Saved Recipes##
 - "saveRecipe" JSON objects are the saved recipes from previous sessions
 - The newest to the oldest goes from top to bottom
-#savedRecipes#
 
+#savedRecipes#
