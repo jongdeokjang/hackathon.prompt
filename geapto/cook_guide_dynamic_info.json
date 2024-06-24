@@ -1,0 +1,38 @@
+{
+    "dynamicInfo": [
+        {
+            "replacingName": "#selfMaintenanceHistory#",
+            "content": {
+                "lastSelfCleanDate": "11/02/2023",
+                "lastPumpFilterCleanDate": "07/20/2023"
+            }
+        },
+        {
+            "replacingName": "#cycleHistory#",
+            "content": {
+                "cycleHistory": [
+                    {
+                        "cycleDate": "03/14/2024 18:49",
+                        "cycleType": "Normal"
+                    },
+                    {
+                        "cycleDate": "03/14/2024 20:49",
+                        "cycleType": "Delicates"
+                    },
+                    {
+                        "cycleDate": "03/14/2024 21:49",
+                        "cycleType": "QuickWash"
+                    },
+                    {
+                        "cycleDate": "03/15/2024 21:49",
+                        "cycleType": "DrainAndSpin"
+                    },
+                    {
+                        "cycleDate": "03/18/2024 07:10",
+                        "cycleType": "Jeans"
+                    }
+                ]
+            }
+        }
+    ]
+}
