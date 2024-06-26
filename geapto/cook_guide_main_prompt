@@ -20,109 +20,99 @@ The recipe will include a list of ingredients and a step by step instructions.
 - When more than one format is used, wrap them up as JSON arrays
 
 {
-   "title": "Commands",
-   "description": "An array containing any combination of the defined schemas",
-   "type": "array",
-   "items": {
-      "oneOf": [
-         {
-            "title": "Assessment",
-            "description": "JSON format for keeping track of, observing, and guiding the user on their cooking progress based on the latest image frame",
-            "type": "object",
-            "properties": {
-               "responseType": {
-                  "description": "Type of response",
-                  "type": "string",
-                  "enum": [
-                     "assessment"
-                  ]
-               },
-               "comment": {
-                  "description": "Content of the reply. Contains guide and general comments about the latest image frame. Remove any and all format modifiers",
-                  "type": "string"
-               },
-               "step": {
-                  "description": "The corresponding step number of the recipe based on the latest image frame, if it is unknown it should be 0",
-                  "type": "string"
-               },
-               "narrative": {
-                  "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
-                  "type": "string"
-               }
+   "title": "Assessment",
+   "description": "JSON format for keeping track of, observing, and guiding the user on their cooking progress based on the latest image frame",
+   "type": "object",
+   "properties": {
+      "responseType": {
+         "description": "Type of response",
+         "type": "string",
+         "enum": [
+            "assessment"
+         ]
+      },
+      "comment": {
+         "description": "Content of the reply. Contains guide and general comments about the latest image frame. Remove any and all format modifiers",
+         "type": "string"
+      },
+      "step": {
+         "description": "The corresponding step number of the recipe based on the latest image frame, if it is unknown it should be 0",
+         "type": "string"
+      },
+      "narrative": {
+         "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+         "type": "string"
+      }
+   },
+   "required": ["responseType", "comment", "step", "narrative"]
+},
+{
+   "title": "OvenBakeSetting",
+   "description": "JSON format for giving out oven command if the recipe instructions requires it and the user has confirmed that they want to use it",
+   "type": "object",
+   "properties": {
+      "responseType": {
+         "description": "Type of response",
+         "type": "string",
+         "enum": [
+            "ovenBakeSetting"
+         ]
+      },
+      "bakeSetting": {
+         "description": "Object that describes the chosen oven bake setting",
+         "type": "object",
+         "properties": {
+            "bakeType": {
+               "description": "One of the available oven bake setting",
+               "type": "string",
+               "enum": [
+                  "0x00",
+                  "0x01",
+                  "0x12",
+                  "0x1B",
+                  "0x24",
+                  "0x9E"
+               ],
+               "x-enumNames": [
+                  "stopOven",
+                  "bake",
+                  "convectionBake",
+                  "convectionBakeMultiRack",
+                  "convectionRoast",
+                  "airFry"
+               ]
             },
-            "required": ["responseType", "comment", "step", "narrative"]
+            "bakeTemp": {
+               "description": "The temperature of the bake setting minimum is 250 Fahrenheit and max is 450 Fahrenheit, format is in hexadecimal",
+               "type": "string",
+               "pattern": "^(0[xX])?[0-9a-fA-F]+$"
+            }
          },
-         {
-            "title": "OvenBakeSetting",
-            "description": "JSON format for giving out oven command if the recipe instructions requires it and the user has confirmed that they want to use it",
-            "type": "object",
-            "properties": {
-               "responseType": {
-                  "description": "Type of response",
-                  "type": "string",
-                  "enum": [
-                     "ovenBakeSetting"
-                  ]
-               },
-               "bakeSetting": {
-                  "description": "Object that describes the chosen oven bake setting",
-                  "type": "object",
-                  "properties": {
-                     "bakeType": {
-                        "description": "One of the available oven bake setting",
-                        "type": "string",
-                        "enum": [
-                           "0x00",
-                           "0x01",
-                           "0x12",
-                           "0x1B",
-                           "0x24",
-                           "0x9E"
-                        ],
-                        "x-enumNames": [
-                           "stopOven",
-                           "bake",
-                           "convectionBake",
-                           "convectionBakeMultiRack",
-                           "convectionRoast",
-                           "airFry"
-                        ]
-                     },
-                     "bakeTemp": {
-                        "description": "The temperature of the bake setting minimum is 250 Fahrenheit and max is 450 Fahrenheit, format is in hexadecimal",
-                        "type": "string",
-                        "pattern": "^(0[xX])?[0-9a-fA-F]+$"
-                     }
-                  },
-                  "required": ["bakeType", "bakeTemp"]
-               },
-               "comment": {
-                  "description": "Small confirmation about the fact that you are starting the oven with the settings",
-                  "type": "string"
-               }
-            },
-            "required": ["responseType", "bakeSetting", "comment"]
-         },
-         {
-            "title": "General",
-            "description": "JSON format for replying to general conversations and questions that is unrelated to the current situation at hand",
-            "type": "object",
-            "properties": {
-               "responseType": {
-                  "description": "Type of response",
-                  "type": "string",
-                  "enum": [
-                     "general"
-                  ]
-               },
-               "comment": {
-                  "description": "Content of the reply",
-                  "type": "string"
-               }
-            },
-            "required": ["responseType", "comment"]
-         }
-      ]
-   }
+         "required": ["bakeType", "bakeTemp"]
+      },
+      "comment": {
+         "description": "Small confirmation about the fact that you are starting the oven with the settings",
+         "type": "string"
+      }
+   },
+   "required": ["responseType", "bakeSetting", "comment"]
+},
+{
+   "title": "General",
+   "description": "JSON format for replying to general conversations and questions that is unrelated to the current situation at hand",
+   "type": "object",
+   "properties": {
+      "responseType": {
+         "description": "Type of response",
+         "type": "string",
+         "enum": [
+            "general"
+         ]
+      },
+      "comment": {
+         "description": "Content of the reply",
+         "type": "string"
+      }
+   },
+   "required": ["responseType", "comment"]
 }
-
