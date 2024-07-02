@@ -160,3 +160,15 @@ The recipe will include a list of ingredients and a step by step instructions.
       "comment"
    ]
 }
+
+
+
+
+
+
+
+
+{
+   "ingredients": "1 baguette, sliced\n1 lb shrimp, peeled and deveined\n4 cloves garlic, minced\n1/2 cup grated parmesan cheese\n2 tbsp fresh parsley, chopped\n2 tbsp olive oil\n1 lemon, juiced\nSalt and pepper to taste",
+   "instructions": "1. Preheat your oven to 375°F (190°C).\n2. In a pan over medium heat, add the olive oil and garlic. Cook the garlic until fragrant, about 1 minute.\n3. Add the shrimp to the pan and cook until pink and opaque, about 2-3 minutes per side. Remove from heat and set aside.\n4. In a bowl, combine the cooked shrimp, minced garlic, lemon juice, parsley, salt, and pepper. Stir to combine.\n5. Place the baguette slices on a baking sheet. Divide the shrimp mixture evenly over the slices.\n6. Sprinkle grated parmesan cheese generously over each slice.\n7. Bake in the preheated oven for 8-10 minutes, or until the cheese is melted and the bread is toasted.\n8. Serve warm and enjoy!",
+}
