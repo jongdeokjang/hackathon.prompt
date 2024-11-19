@@ -1,2 +1,2 @@
 # hackathon.prompt
-It has Jason Format File to support hackathon.
+It has Json Format File to support hackathon.
