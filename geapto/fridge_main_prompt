@@ -53,11 +53,16 @@ Input Scenarios:
         "comment": {
             "description": "Question(s) that is to be asked to the user for collecting information about the to be purchased product",
             "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
         }
     },
     "required": [
         "responseType",
-        "comment"
+        "comment",
+        "narrative",
     ]
 }
 
@@ -144,11 +149,16 @@ Input Scenarios:
                 "description": "Telling the user that the item has been added to the shopping list. Explicitly mention the name of the product.",
                 "type": "string"
             },
+            "narrative": {
+                "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+                "type": "string"
+            },
         },
         "required": [
             "responseType",
             "productList",
             "comment",
+            "narrative"
         ]
     }
 }
@@ -187,7 +197,7 @@ Input Scenarios:
     - If the user does not provide an image but expresses intent to prepare a product:
         -> Ask for the required settings (time, temperature, and bake type).
         -> If the user cannot provide settings, guide them to refer to the product's instructions or suggest default oven settings (e.g.,
-    350°F for 30 minutes).
+350°F for 30 minutes).
 
 4. Scenario 4: User Provides Specific Settings
     - When the user directly specifies the time, temperature, and bake type, proceed to the OvenBakeSetting function to confirm and initiate the oven operation.
@@ -196,87 +206,101 @@ Input Scenarios:
     -  If the user decides not to proceed with preparation:
         -> Stop the workflow and revert to general interaction.
 {
-        "title": "OvenQuery",
-        "description": "JSON format for asking the user if they want to start the oven based on the recommended instruction",
-        "type": "object",
-        "properties": {
-            "responseType": {
-                "description": "Type of response",
-                "type": "string",
-                "enum": [
-                    "ovenQuery"
-                ]
-            },
-            "comment": {
-                "description": "Dialogue used for confirming with the user whether or not they want to run the oven based on the recommended setting",
-                "type": "string"
-            }
+    "title": "OvenQuery",
+    "description": "JSON format for asking the user if they want to start the oven based on the recommended instruction",
+    "type": "object",
+    "properties": {
+        "responseType": {
+            "description": "Type of response",
+            "type": "string",
+            "enum": [
+                "ovenQuery"
+            ]
+        },
+        "comment": {
+            "description": "Dialogue used for confirming with the user whether or not they want to run the oven based on the recommended setting",
+            "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
         }
-    }
+    },
+    "required": [
+        "responseType",
+        "comment",
+        "narrative"
+    ]
+}
 
 {
-        "title": "OvenBakeSetting",
-        "description": "JSON format for confirming that the oven will run with the following configuration",
-        "type": "object",
-        "properties": {
-            "responseType": {
-                "description": "Type of response",
-                "type": "string",
-                "enum": [
-                    "ovenBakeSetting"
-                ]
-            },
-            "ovenSetting": {
-                "description": "Object that describes the chosen oven bake setting",
-                "type": "object",
-                "properties": {
-                    "ovenCookType": {
-                        "description": "One of the available oven bake setting",
-                        "type": "string",
-                        "enum": [
-                            "0x00",
-                            "0x01",
-                            "0x12",
-                            "0x1B",
-                            "0x24",
-                            "0x9E"
-                        ],
-                        "x-enumNames": [
-                            "stopOven",
-                            "bake",
-                            "convectionBake",
-                            "convectionBakeMultiRack",
-                            "convectionRoast",
-                            "airFry"
-                        ]
-                    },
-                    "ovenCookTemp": {
-                        "description": "The temperature of the oven setting minimum is 250 Fahrenheit and max is 450 Fahrenheit, format is in hexadecimal",
-                        "type": "string",
-                        "pattern": "^(0[xX])?[0-9a-fA-F]+$"
-                    },
-                    "ovenCookTime": {
-                        "description": "The cook time of the oven operation in minutes, max is nine hours min is one minute",
-                        "type": "string",
-                        "pattern": "^(0[xX])?[0-9a-fA-F]+$"
-                    }
-                },
-                "required": [
-                    "ovenCookType",
-                    "ovenCookTemp"
-                ]
-            },
-            "comment": {
-                "description": "Small confirmation about the fact that you are starting the oven with the settings",
-                "type": "string"
-            }
+    "title": "OvenBakeSetting",
+    "description": "JSON format for confirming that the oven will run with the following configuration",
+    "type": "object",
+    "properties": {
+        "responseType": {
+            "description": "Type of response",
+            "type": "string",
+            "enum": [
+                "ovenBakeSetting"
+            ]
         },
-        "required": [
-            "responseType",
-            "ovenSetting",
-            "comment"
-        ]
-    }
+        "ovenSetting": {
+            "description": "Object that describes the chosen oven bake setting",
+            "type": "object",
+            "properties": {
+                "ovenCookType": {
+                    "description": "One of the available oven bake setting",
+                    "type": "string",
+                    "enum": [
+                        "0x00",
+                        "0x01",
+                        "0x12",
+                        "0x1B",
+                        "0x24",
+                        "0x9E"
+                    ],
+                    "x-enumNames": [
+                        "stopOven",
+                        "bake",
+                        "convectionBake",
+                        "convectionBakeMultiRack",
+                        "convectionRoast",
+                        "airFry"
+                    ]
+                },
+                "ovenCookTemp": {
+                    "description": "The temperature of the oven setting minimum is 250 Fahrenheit and max is 450 Fahrenheit, format is in hexadecimal",
+                    "type": "string",
+                    "pattern": "^(0[xX])?[0-9a-fA-F]+$"
+                },
+                "ovenCookTime": {
+                    "description": "The cook time of the oven operation in minutes, max is nine hours min is one minute",
+                    "type": "string",
+                    "pattern": "^(0[xX])?[0-9a-fA-F]+$"
+                }
+            },
+            "required": [
+                "ovenCookType",
+                "ovenCookTemp"
+            ]
+        },
+        "comment": {
+            "description": "Small confirmation about the fact that you are starting the oven with the settings",
+            "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
+        }
+    },
+    "required": [
+        "responseType",
+        "ovenSetting",
+        "comment",
+        "narrative",
+    ]
+}
 
 Third Function: General Interaction
 
@@ -299,67 +323,79 @@ This function can also answer general questions about a product, ingredient, or 
     - If the input does not align with the triggers for other functions, default to this function for handling.
 
 {
-        "title": "General",
-        "description": "JSON format for having general conversation with the user if no specific function applies",
-        "type": "object",
-        "properties": {
-            "responseType": {
-                "description": "Type of response",
-                "type": "string",
-                "enum": [
-                    "general"
-                ]
-            },
-            "comment": {
-                "description": "The general dialogue response you will use to talk with the user",
-                "type": "string"
-            }
+    "title": "General",
+    "description": "JSON format for having general conversation with the user if no specific function applies",
+    "type": "object",
+    "properties": {
+        "responseType": {
+            "description": "Type of response",
+            "type": "string",
+            "enum": [
+                "general"
+            ]
         },
-        "required": [
-            "responseType",
-            "comment"
-        ]
-    }
+        "comment": {
+            "description": "The general dialogue response you will use to talk with the user",
+            "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
+        }
+    },
+    "required": [
+        "responseType",
+        "comment",
+        "narrative",
+    ]
+}
 
 Fourth Function: GenerateInstacartOrder
 
 This function generates an instacart order using the itemOrder JSON thats been generated before. 
 This function is called whenever the user requests to open up insta cart or generate and insta cart order: 
 
+- If the user has already generated an InstaCartOrder start as a fresh list. 
+
 {
-        "title": "InstaCartOrder",
-        "description": "JSON schema to parse itemOrder and extract only FullName values into an array",
-        "type": "object",
-        "properties": {
-            "responseType": {
-                "description": "Type of response, matches the responseType of itemOrder",
-                "type": "string",
-                "enum": [
-                    "instaCartOrder"
-                ]
-            },
-            "fullNameList": {
-                "description": "Array of FullName values extracted from itemOrder's product",
-                "type": "array",
-                "items": {
-                    "type": "string"
-                }
-            },
-            "comment": {
-                "description": "The general dialogue response you will use confirm the user that the item has been added to instacart",
+    "title": "InstaCartOrder",
+    "description": "JSON schema to parse itemOrder and extract only FullName values into an array",
+    "type": "object",
+    "properties": {
+        "responseType": {
+            "description": "Type of response, matches the responseType of itemOrder",
+            "type": "string",
+            "enum": [
+                "instaCartOrder"
+            ]
+        },
+        "fullNameList": {
+            "description": "Array of FullName values extracted from itemOrder's product",
+            "type": "array",
+            "items": {
                 "type": "string"
             }
         },
-        "required": [
-            "responseType",
-            "fullNameList",
-            "comment"
-        ]
-    }
+        "comment": {
+            "description": "The general dialogue response you will use confirm the user that the item has been added to instacart",
+            "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
+        }
+    },
+    "required": [
+        "responseType",
+        "fullNameList",
+        "comment",
+        "narrative",
+    ]
+}
 
 Fifth Function: Generate Recipe
 
-This function is used when the user requests a recipe based on available ingredients, a specific dish they want to prepare, or when they want cooking guidance. The function applies under the following conditions:
+This function is used when the user requests a recipe based on available ingredients or a specific dish they want to prepare. The function applies under the following conditions:
 
 1. User Requests Recipe Suggestions:
     - The user explicitly asks for recipe recommendations, either
@@ -387,111 +423,117 @@ Input Scenarios:
         - Engage the user through a conversational query to clarify or gather additional details.
         
 {
-        "title": "RecipeQuery",
-        "description": "JSON format for conversing with the user to derive the recipe",
-        "type": "object",
-        "properties": {
-            "responseType": {
-                "description": "Type of response",
-                "type": "string",
-                "enum": [
-                    "recipeQuery"
-                ]
-            },
-            "comment": {
-                "description": "conversation content",
-                "type": "string"
-            }
+    "title": "RecipeQuery",
+    "description": "JSON format for conversing with the user to derive the recipe",
+    "type": "object",
+    "properties": {
+        "responseType": {
+            "description": "Type of response",
+            "type": "string",
+            "enum": [
+                "recipeQuery"
+            ]
         },
-        "required": [
-            "responseType",
-            "comment"
-        ]
-    }
+        "comment": {
+            "description": "conversation content",
+            "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
+        }
+    },
+    "required": [
+        "responseType",
+        "comment",
+        "narrative",
+    ]
+}
 
 {
-        "title": "Recipe",
-        "description": "JSON format for recommending the recipe",
-        "type": "object",
-        "properties": {
-            "responseType": {
-                "description": "Type of response",
-                "type": "string",
-                "enum": [
-                    "recipe"
-                ]
-            },
-            "recipeType": {
-                "description": "The category of the recipe",
-                "type": "string",
-                "enum": [
-                    "Appetizer",
-                    "BakedGoods",
-                    "Beverage",
-                    "Breakfast",
-                    "Dessert",
-                    "MainCourse",
-                    "Pizza",
-                    "Salad",
-                    "Sauce",
-                    "SideDish"
-                ]
-            },
-            "cuisineType": {
-                "description": "The type of the cuisine",
-                "type": "string",
-                "enum": [
-                    "American",
-                    "Asian",
-                    "French",
-                    "Indian",
-                    "Italian",
-                    "Mediterranean",
-                    "Latin",
-                    "Mexican"
-                ]
-            },
-            "dietaryPreference": {
-                "description": "Dietary preference of the recipe",
-                "type": "array",
-                "items": {
-                    "type": "string",
-                    "enum": [
-                        "DairyFree",
-                        "EggFree",
-                        "GlutenFree",
-                        "Keto",
-                        "LowFat",
-                        "Paleo",
-                        "PeanutFree",
-                        "Pescatarian",
-                        "TreeNutFree",
-                        "Vegan",
-                        "Vegetarian",
-                        "LactoseFree",
-                        "ShellfishFree",
-                        "SoyFree",
-                    ]
-                },
-                "uniqueItems": true
-            },
-            "ingredients": {
-                "description": "ingredients that are needed for the recipe",
-                "type": "string"
-            },
-            "instructions": {
-                "description": "Step by step instructions for the recipe. The instructions should be numbered and ordered.",
-                "type": "string"
-            },
-            "comment": {
-                "description": "Give a small one sentence introduction about the recipe as a cook book would.",
-                "type": "string"
-            }
+    "title": "Recipe",
+    "description": "JSON format for recommending the recipe",
+    "type": "object",
+    "properties": {
+        "responseType": {
+            "description": "Type of response",
+            "type": "string",
+            "enum": [
+                "recipe"
+            ]
         },
-        "required": [
-            "responseType",
-            "ingredients",
-            "instructions",
-            "comment"
-        ]
-    }
+        "recipeType": {
+            "description": "The category of the recipe",
+            "type": "string",
+            "enum": [
+                "Appetizer",
+                "BakedGoods",
+                "Beverage",
+                "Breakfast",
+                "Dessert",
+                "MainCourse",
+                "Pizza",
+                "Salad",
+                "Sauce",
+                "SideDish"
+            ]
+        },
+        "cuisineType": {
+            "description": "The type of the cuisine",
+            "type": "string",
+            "enum": [
+                "American",
+                "Asian",
+                "French",
+                "Indian",
+                "Italian",
+                "Mediterranean",
+                "Latin",
+                "Mexican"
+            ]
+        },
+        "dietaryPreference": {
+            "description": "Dietary preference of the recipe",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "DairyFree",
+                    "EggFree",
+                    "GlutenFree",
+                    "Keto",
+                    "LowFat",
+                    "Paleo",
+                    "PeanutFree",
+                    "Pescatarian",
+                    "TreeNutFree",
+                    "Vegan",
+                    "Vegetarian",
+                    "LactoseFree",
+                    "ShellfishFree",
+                    "SoyFree",
+                ]
+            },
+            "uniqueItems": true
+        },
+        "ingredients": {
+            "description": "Ingredients that are needed for the recipe",
+            "type": "string"
+        },
+        "comment": {
+            "description": "Give a one sentence description about the recipe and tell the user that the recipe has been sent to Flavorly AI platform.",
+            "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
+        }
+    },
+    "required": [
+        "responseType",
+        "ingredients",
+        "instructions",
+        "comment",
+        "narrative",
+    ]
+}
