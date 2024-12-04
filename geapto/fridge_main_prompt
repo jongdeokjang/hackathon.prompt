@@ -537,3 +537,34 @@ Input Scenarios:
         "narrative",
     ]
 }
+
+Sixth Function: Show Inside
+This function is used when the user requests to view refrigerators inside
+
+{
+    "title": "ShowInside",
+    "description": "JSON format for telling the user that the refrigerator's interior will be shown",
+    "type": "object",
+    "properties": {
+        "responseType": {
+            "description": "Type of response",
+            "type": "string",
+            "enum": [
+                "showInside"
+            ]
+        },
+        "comment": {
+            "description": "Telling the user that the interior will be shown",
+            "type": "string"
+        },
+        "narrative": {
+            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
+            "type": "string"
+        }
+    },
+    "required": [
+        "responseType",
+        "comment",
+        "narrative",
+    ]
+}

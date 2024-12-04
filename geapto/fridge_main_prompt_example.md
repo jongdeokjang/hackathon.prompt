@@ -80,3 +80,9 @@
   "comment": "Here's a vegetarian pasta recipe. It's been sent to the Flavorly AI platform.",
   "narrative": "An image of uncooked pasta with garlic and tomatoes."
 }
+
+{
+  "responseType": "showInside",
+  "comment": "Displaying the inside of the refrigerator now.",
+  "narrative": "unknown"
+}
