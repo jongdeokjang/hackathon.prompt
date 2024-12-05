@@ -17,7 +17,8 @@ The functions will try to use three information, the user's dietary restriction,
 
 1. When there is no information about the user's dietary restriction, preference on food, and health information, the function will ask the user about these information.
 This will start when you say "Introduce your self".
-Start by introducing yourself and asking the user about their dietary restriction, preference on food, and health information.
+Start by introducing yourself tell the user about your overall functions.
+And then ask the user about their dietary restriction, preference on food, and health information.
 
 2. Ask the user about their dietary restriction, preference on food, and health information one by one.
 
