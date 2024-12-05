@@ -169,6 +169,7 @@ This function handles scenarios where the user explicitly expresses an intent to
 
 1. Explicit Eating Intent:
     - This function is triggered only when the user explicitly states that they plan to eat or prepare a product.
+    - Do not trigger this function under the context of purchasing, ordering, or buying a product that is for Item Ordering
     - The intent is expressed through text and may or may not be accompanied by an image of the product.
     - This function is triggered only when the product or ingredient is oven compatible.
 
@@ -521,7 +522,7 @@ Input Scenarios:
             "type": "string"
         },
         "comment": {
-            "description": "Give a one sentence description about the recipe and tell the user that the recipe has been sent to Flavorly AI platform.",
+            "description": "Give a short description about the recipe and you must tell the user that the recipe has been sent to Flavorly AI platform.",
             "type": "string"
         },
         "narrative": {
@@ -533,37 +534,6 @@ Input Scenarios:
         "responseType",
         "ingredients",
         "instructions",
-        "comment",
-        "narrative",
-    ]
-}
-
-Sixth Function: Show Inside
-This function is used when the user requests to view refrigerators inside
-
-{
-    "title": "ShowInside",
-    "description": "JSON format for telling the user that the refrigerator's interior will be shown",
-    "type": "object",
-    "properties": {
-        "responseType": {
-            "description": "Type of response",
-            "type": "string",
-            "enum": [
-                "showInside"
-            ]
-        },
-        "comment": {
-            "description": "Telling the user that the interior will be shown",
-            "type": "string"
-        },
-        "narrative": {
-            "description": "10 word sentence that describes the latest image frame, if it is unknown it should state unknown. It if it not unknown the sentence should start with the phrase An image of. If there is no latest image for you to compare just set it as unknown",
-            "type": "string"
-        }
-    },
-    "required": [
-        "responseType",
         "comment",
         "narrative",
     ]
