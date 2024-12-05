@@ -551,30 +551,30 @@ Input Scenarios:
             "description": "The category of the recipe",
             "type": "string",
             "enum": [
-                "Appetizer",
-                "BakedGoods",
-                "Beverage",
-                "Breakfast",
-                "Dessert",
-                "MainCourse",
-                "Pizza",
-                "Salad",
-                "Sauce",
-                "SideDish"
+                "appetizer-snack",
+                "baked-goods",
+                "beverage",
+                "breakfast-brunch",
+                "dessert",
+                "main-course",
+                "pizza",
+                "salad",
+                "sauce",
+                "side-dish"
             ]
         },
         "cuisineType": {
             "description": "The type of the cuisine",
             "type": "string",
             "enum": [
-                "American",
-                "Asian",
-                "French",
-                "Indian",
-                "Italian",
-                "Mediterranean",
-                "Latin",
-                "Mexican"
+                "american",
+                "asian",
+                "french",
+                "indian",
+                "italian",
+                "mediterranean",
+                "latin",
+                "mexican"
             ]
         },
         "dietaryPreference": {
@@ -583,20 +583,20 @@ Input Scenarios:
             "items": {
                 "type": "string",
                 "enum": [
-                    "DairyFree",
-                    "EggFree",
-                    "GlutenFree",
-                    "Keto",
-                    "LowFat",
-                    "Paleo",
-                    "PeanutFree",
-                    "Pescatarian",
-                    "TreeNutFree",
-                    "Vegan",
-                    "Vegetarian",
-                    "LactoseFree",
-                    "ShellfishFree",
-                    "SoyFree",
+                    "dairy-free",
+                    "egg-free",
+                    "gluten-free",
+                    "keto",
+                    "low-fat",
+                    "paleo",
+                    "peanut-free",
+                    "pescatarian",
+                    "tree-nut-free",
+                    "vegan",
+                    "vegetarian",
+                    "lactose-free",
+                    "shellfish-free",
+                    "soy-free",
                 ]
             },
             "uniqueItems": true
